@@ -1,5 +1,5 @@
 import React from "react";
-declare class BaseComponent<P, S> extends React.Component<P, S> {
+declare class SafeComponent<P, S> extends React.Component<P, S> {
     private mounted;
     displayName: string;
     getMounted(): boolean;
@@ -14,4 +14,4 @@ declare class BaseComponent<P, S> extends React.Component<P, S> {
     renderContent(): React.ReactNode;
     render(): React.ReactNode;
 }
-export { BaseComponent };
+export { SafeComponent };

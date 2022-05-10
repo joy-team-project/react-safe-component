@@ -3,7 +3,7 @@ import { shouldComponentUpdate } from "react-window";
 
 // Lớp wrap lại Component với việc kiểm tra kĩ hơn trạng thái mounted của Component
 
-class BaseComponent<P, S> extends React.Component<P, S> {
+class SafeComponent<P, S> extends React.Component<P, S> {
   private mounted: boolean = true;
   displayName: string;
 
@@ -59,6 +59,6 @@ class BaseComponent<P, S> extends React.Component<P, S> {
   }
 }
 
-BaseComponent.prototype.shouldComponentUpdate = shouldComponentUpdate;
+SafeComponent.prototype.shouldComponentUpdate = shouldComponentUpdate;
 
-export { BaseComponent };
+export { SafeComponent };
